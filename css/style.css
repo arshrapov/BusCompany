@@ -1,0 +1,157 @@
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 75px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 0.05em;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.row_col {
+  width: 33.3333%;
+}
+.row_col_3 {
+  width: 66.6666%;
+}
+
+/*=========Header==============*/
+.header {
+  padding: 27px 0;
+  background: #2F343A;
+  color: #fff;
+  font-size: 14px;
+}
+.header .row nav, .header .row div {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  display: -ms-flexbox;
+}
+.header__logo p:nth-child(1) {
+  line-height: 16px;
+  display: flex;
+  display: -ms-flexbox;
+}
+.header__logo p:nth-child(1):after {
+  content: "";
+  margin: 0 16.5px;
+  display: block;
+  height: 46px;
+  width: 1px;
+  background-color: #C8A35F;
+}
+.header__logo p:nth-child(2) {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+.header__logo p:nth-child(2) span:nth-child(2) {
+  margin-left: 7px;
+  height: 16px;
+}
+.header__link {
+  text-transform: uppercase;
+  margin-right: 30px;
+  color: #fff;
+  transition: all 0.2s ease-in;
+}
+.header__link:last-child {
+  margin: 0;
+}
+.header__link:hover {
+  color: #C8A35F;
+}
+
+/*=========Main styles=========*/
+.mainscreen {
+  display: flex;
+  display: -ms-flexbox;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.first_line {
+  padding: 16px 0;
+  background-color: #C8A35F;
+  font-size: 12px;
+  color: white;
+}
+.first_line .container {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.first_line p {
+  display: block;
+}
+.first_line span {
+  margin-right: 3px;
+}
+.first_line span:last-child {
+  margin: 0;
+}
+
+.offer {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  flex-grow: 3;
+  align-items: center;
+  background: url("../images/mainscreen/bg.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+.offer__content {
+  text-align: center;
+  padding: 71px 45px;
+  border: 1px solid #C8A35F;
+}
+.offer__text {
+  margin-top: 42px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/*=========Footer==============*/
