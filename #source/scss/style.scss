@@ -80,6 +80,9 @@ h2 {
     line-height: 25px;
     color: white;
     text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -168,6 +171,12 @@ section {
   .row {
     position: relative;
     z-index: 40000;
+    &_col {
+      width: 30%;
+    }
+    &_col_3 {
+      width: 60%;
+    }
     &__text {
       margin: 30px 0 50px;
     }
@@ -175,7 +184,9 @@ section {
   .slider {
     @include flexBox;
     flex-direction: row;
+    position: relative;
     &__image {
+      position: relative;
       width: 445px;
       min-height: 266px;
       background: url("../images/servises/1.png");
@@ -223,6 +234,7 @@ section {
     border: solid 1px $dark;
     padding: 35px 42px;
     background: $darkGray;
+    transition: background .3s ease-in;
     &__icon {
       margin-bottom: 23px;
       @include flexBox;

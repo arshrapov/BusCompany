@@ -97,6 +97,9 @@ h2 {
   color: white;
   text-transform: uppercase;
 }
+.row_cta:hover {
+  cursor: pointer;
+}
 
 section {
   padding: 120px 0 129px;
@@ -249,6 +252,12 @@ section {
   position: relative;
   z-index: 40000;
 }
+.services .row_col {
+  width: 30%;
+}
+.services .row_col_3 {
+  width: 60%;
+}
 .services .row__text {
   margin: 30px 0 50px;
 }
@@ -256,8 +265,10 @@ section {
   display: flex;
   display: -ms-flexbox;
   flex-direction: row;
+  position: relative;
 }
 .services .slider__image {
+  position: relative;
   width: 445px;
   min-height: 266px;
   background: url("../images/servises/1.png");
@@ -305,6 +316,7 @@ section {
   border: solid 1px #2F343A;
   padding: 35px 42px;
   background: #393F47;
+  transition: background 0.3s ease-in;
 }
 .all_servises .row__item__icon {
   margin-bottom: 23px;
