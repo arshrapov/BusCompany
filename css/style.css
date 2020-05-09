@@ -71,6 +71,19 @@ h2 {
   width: 90px;
   background: #C8A35F;
 }
+.row__inner {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.row__inner .row__item {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
 .row_cta {
   display: flex;
   display: -ms-flexbox;
@@ -285,4 +298,109 @@ section {
   transform: rotate(180deg);
 }
 
+.all_servises .row__inner {
+  margin: 60px 0 0 0;
+}
+.all_servises .row__item {
+  border: solid 1px #2F343A;
+  padding: 35px 42px;
+  background: #393F47;
+}
+.all_servises .row__item__icon {
+  margin-bottom: 23px;
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #fff;
+}
+.all_servises .row__item__title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.all_servises .row__item:hover {
+  background: #C8A35F;
+  cursor: pointer;
+}
+
+.about .row__text {
+  margin: 30px 0 0 0;
+  line-height: 23px;
+}
+.about .row__item {
+  display: flex;
+  display: -ms-flexbox;
+  padding: 23px 0 25px;
+  width: 33.333%;
+  border: 0.25px solid #C8A35F;
+  background: #fff;
+  align-items: center;
+  text-align: center;
+}
+.about .row__item h1 {
+  color: #2F343A;
+}
+.about .row__item p {
+  color: #2F343A;
+  margin: 10px 0 15px;
+  font-size: 18px;
+  line-height: 21px;
+}
+.about .row__item span {
+  color: #2F343A;
+  font-size: 12px;
+}
+.about .row__item:nth-child(3), .about .row__item:nth-child(4) {
+  border: none;
+  padding: 0;
+}
+.about .row__item .item__image {
+  width: 100%;
+  height: 100%;
+  background: url("../images/about/01.png");
+  background-size: cover;
+}
+
+.maps {
+  height: 450px;
+  width: 100%;
+  padding: 0;
+  background: url("../images/maps/bg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 /*=========Footer==============*/
+.footer {
+  padding: 65px 0 60px;
+  background: #C8A35F;
+}
+.footer ul {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer ul li {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: column;
+}
+.footer ul li:last-child {
+  margin: 0;
+}
+.footer ul li p:nth-child(1) {
+  margin-bottom: 10px;
+}
+.footer p {
+  color: #fff;
+  font-size: 14px;
+}
+.footer .blacked {
+  color: #000;
+}
