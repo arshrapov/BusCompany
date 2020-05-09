@@ -14,6 +14,7 @@ $gold: #C8A35F;
 body {
   font-family: $fontfamily, sans-serif;
   color: white;
+  cursor: url('../images/mouse.png'), auto;
 }
 h1 {
   font-size: 64px;
@@ -22,12 +23,14 @@ h1 {
 }
 h2 {
   font-size: 40px;
-  line-height: 0.05em;;
   text-transform: uppercase;
 }
 .container {
   max-width: 1100px;
   margin: 0 auto;
+  @media (max-width: 1151px) {
+    padding: 0 5%;
+  }
 }
 
 .row {
@@ -35,11 +38,43 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   &_col {
-    width: 33.3333%;
+    @include flexBox;
+    flex-direction: column;
+    width: 38%;
     &_3 {
-      width: 66.6666%;
+      width: 53%;
+    }
+    &_f {
+      width: 100%;
     }
   }
+  .col_content  {
+    &:before {
+      margin-bottom: 20px;
+      content: "";
+      display: block;
+      height: 6px;
+      width: 90px;
+      background: $gold;
+    }
+  }
+  &_cta {
+    @include flexBox;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 55px;
+    background: $gold;
+    font-size: 16px;
+    line-height: 25px;
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+section {
+  padding: 120px 0 129px;
+  background: $dark;
 }
 
 /*=========Header==============*/
@@ -91,6 +126,81 @@ h2 {
     margin-top: 42px;
     font-size: 18px;
     line-height: 28px;
+  }
+}
+
+.services {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 40%;
+    background: $darkGray;
+    z-index: 0;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 40%;
+    background: $darkGray;
+    z-index: 0;
+  }
+  .row {
+    position: relative;
+    z-index: 40000;
+    &__text {
+      margin: 30px 0 50px;
+    }
+  }
+  .slider {
+    @include flexBox;
+    flex-direction: row;
+    &__image {
+      width: 445px;
+      min-height: 266px;
+      background: url("../images/servises/1.png");
+    }
+    &__buttons {
+      @include flexBox;
+      flex-direction: column;
+      justify-content: space-between;
+      color: $gold;
+      text-transform: uppercase;
+      .button__next {
+        @include flexBox;
+        flex-direction: row;
+        &:after {
+          margin-left: 31px;
+          display: block;
+          width: 67px;
+          height: 24px;
+          content: "";
+          background: url("../images/servises/Arrow.png");
+        }
+      }
+      .button__back {
+        @include flexBox;
+        flex-direction: row;
+        &:before {
+          margin-right: 31px;
+          display: block;
+          width: 67px;
+          height: 24px;
+          content: "";
+          background: url("../images/servises/Arrow.png");
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 }
 

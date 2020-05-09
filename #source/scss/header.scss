@@ -45,3 +45,20 @@
     }
   }
 }
+@media (max-width: 915px) {
+  h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 841px) {
+  .header {
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 810px) {
+  .header__nav {
+    display: none !important;
+  }
+}
